@@ -8,10 +8,10 @@ String.prototype.allReplace = function(obj) {
 
 
 $(function() {
-  
 
-  
-  
+
+
+
   function beep() {
     var snd = new Audio(
       "https://cdn.glitch.com/53cdc14c-b2e2-4d5a-ad4b-4e82060af191%2Fpop.mp3?v=1585762599307"
@@ -29,8 +29,8 @@ $(function() {
     }
   });
 
-  
-  
+
+
   $("#inputzone").submit(function() {
     if (
       $("#m")
@@ -40,13 +40,13 @@ $(function() {
   return false;
     socket.emit("message", $("#m").val(), localStorage.getItem("token"));
   return false;
-  
+
   $("#m").val("");
-    
-    
+
+
     /*
      return false;
-    var fd = new FormData();    
+    var fd = new FormData();
      return false;
 fd.append('file', $("#image-file").prop('files')[0]);
  return false;
@@ -60,21 +60,21 @@ $.ajax({
     alert(data);
   }
 });
-    
+
      return false;*/
-    
+
   });
 
   var messagespart = $("#messages");
-  function messageemit(author, pp, msg, id) {
+  function messageemit(author, avatar, msg, id) {
     var realauthor = document.getElementById("usernamevalue").value
-   
+
     if (author == realauthor) {
       messagespart.append(
         '<div id="' +
           id +
           '"><span> <img class="msgimg" src="' +
-          pp +
+          avatar +
           '"  style="border-radius:50%; vertical-align: middle; display: inline;"></span>' +
           "      <div style='vertical-align: middle; display: inline;' class='username'>" +
           author +
@@ -91,7 +91,7 @@ $.ajax({
     } else {
       messagespart.append(
         '<span> <img class="msgimg" src="' +
-          pp +
+          avatar +
           '"  style="border-radius:50%; vertical-align: middle; display: inline;"></span>' +
           "      <div style='vertical-align: middle; display: inline;' class='username'>" +
           author +
@@ -108,8 +108,8 @@ $.ajax({
       behavior: "smooth"
     });
   }
-  
-  
+
+
   socket.emit("add user", localStorage.getItem("token"));
   //console.log("add user : " + localStorage.getItem("token"));
 
@@ -123,22 +123,22 @@ $.ajax({
     $("#" + id).fadeOut(function() {
       $(this).remove();
     });
-   
+
   });
 
   socket.on("user left", function(username) {
     $(`#${username}`).remove();
   });
 
-  socket.on("loadhist", function(author, pp, msg, id) {
-    messageemit(author, pp, msg, id);
+  socket.on("loadhist", function(author, avatar, msg, id) {
+    messageemit(author, avatar, msg, id);
   });
 
-  socket.on("message", function(author, pp, msg, id) {
-    messageemit(author, pp, msg, id);
+  socket.on("message", function(author, avatar, msg, id) {
+    messageemit(author, avatar, msg, id);
     var realauthor = document.getElementById("usernamevalue").value
     if (author != realauthor) beep();
-    
+
   });
 
   socket.on("connexion", function() {
