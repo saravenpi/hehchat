@@ -41,8 +41,8 @@ $(function() {
     socket.emit("message", $("#m").val(), localStorage.getItem("token"));
   return false;
 
-  $("#m").reset()
-
+  $("#m").reset();
+  $("#inputzone").reset();
 
   });
 
