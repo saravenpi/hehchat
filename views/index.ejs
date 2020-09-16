@@ -16,7 +16,7 @@
  <div class="account" style="float: left;">
 
    <input style="display:none; opacity:0;" id="usernamevalue" value="<%= user.username %>"/>
-   <span><img class="img" src="<%= user.pp %>"  style="border-radius:50%; vertical-align: middle; display: inline;"></span>
+   <span><img class="img" src="<%= user.avatar %>"  style="border-radius:50%; vertical-align: middle; display: inline;"></span>
     <div style="vertical-align: middle; display: inline;" class="usernamebrd"><span style="vertical-align: middle; display: inline;"><%= user.username %></span></div>
 
 <br>
@@ -57,7 +57,7 @@
           <div id="memberlist"></div>
 
     <script>
-      localStorage.setItem('token', "<%= user.token %>");
+      localStorage.setItem('token', "<%= user.uuid %>");
       </script>
 
     </div>
