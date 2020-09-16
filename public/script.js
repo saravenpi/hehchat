@@ -41,27 +41,8 @@ $(function() {
     socket.emit("message", $("#m").val(), localStorage.getItem("token"));
   return false;
 
-  $("#m").val("");
+  $("#m").reset()
 
-
-    /*
-     return false;
-    var fd = new FormData();
-     return false;
-fd.append('file', $("#image-file").prop('files')[0]);
- return false;
-$.ajax({
-  url: 'https://d3s.ru/uploader/upl',
-  data: fd,
-  processData: false,
-  contentType: false,
-  type: 'POST',
-  success: function(data){
-    alert(data);
-  }
-});
-
-     return false;*/
 
   });
 
