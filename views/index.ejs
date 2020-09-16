@@ -1,65 +1,28 @@
-<!doctype html>
-<html>
-  <head>
-    <title>HehChat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="https://kit.fontawesome.com/9df66f7bcf.js" crossorigin="anonymous"></script>
-
-    <script src="/script.js"></script>
-   <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-
-<div class="sidenav">
- <div class="account" style="float: left;">
-
-   <input style="display:none; opacity:0;" id="usernamevalue" value="<%= user.username %>"/>
-   <span><img class="img" src="<%= user.avatar %>"  style="border-radius:50%; vertical-align: middle; display: inline;"></span>
-    <div style="vertical-align: middle; display: inline;" class="usernamebrd"><span style="vertical-align: middle; display: inline;"><%= user.username %></span></div>
-
-<br>
-  </div>
-
-
-
-
-
-  <% if(!user){ %>
-  <a href="/register">Register</a>
-  <a href="/login">Login</a>
-  <%  } else { %>
-<!--  <a href="/config"><i class="fas fa-cogs"></i> Settings</a>-->
-  <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-  <% } %>
-</div>
-
-
-
-    <div class="main">
-
-  <div class="navbar">
-
-</div>
-    <ul id="messages"></ul>
-
-
-
-
-    <form id="inputzone" action="">
-      <div class="form">
-      <input id="m" class="m" autocomplete="off" placeholder="Content" id="InputContentMessage" class="InputContentMessage"/>
-      <!--<input id="image-file" type="file"/>-->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Heh Chat</title>
+      <link rel="stylesheet" href="https://noziro.now.sh/ressources/bulma.css">
+      <script src="https://kit.fontawesome.com/9df66f7bcf.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <style>
+         .centromax {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -moz-transform: translateX(-50%) translateY(-50%);
+         -webkit-transform: translateX(-50%) translateY(-50%);
+         transform: translateX(-50%) translateY(-50%);
+         }
+      </style>
+      <div class="centromax" style="width: 200px;">
+         <a class="button is-primary" href="login">
+         <span class="icon">
+           <i class="fab fa-github"></i>
+         </span>
+         <span>Signin with Github</span>
+         </a>
       </div>
-    </form>
-
-          <div id="memberlist"></div>
-
-    <script>
-      localStorage.setItem('token', "<%= user.uuid %>");
-      </script>
-
-    </div>
-  </body>
+   </body>
 </html>
