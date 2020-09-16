@@ -1,0 +1,180 @@
+body {
+  color: white;
+  margin: 0;
+  background: #36393f;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2f3136;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 15%; /* Same as the width of the sidenav */
+  width: 80%;
+  overflow-wrap: break-word;
+  height: 80%;
+}
+
+
+body {
+  font: 13px Helvetica, Arial;
+}
+.form {
+  position: fixed;
+  bottom: 0;
+ 
+  width: 100%;
+  
+}
+
+.form #m {
+ 
+  border-width: 2px;
+  padding: 0.8%;
+  width: 70%;
+  border-color: black;
+  
+}
+.form #image-file {
+ 
+  border-width: 2px;
+  
+  width: 30%;
+  border-color: black;
+  
+}
+
+
+
+#messages {
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 3px;
+  width: 87%;
+  overflow: auto;
+}
+
+#messages li {
+  padding: 5px 10px;
+  overflow: auto;
+}
+
+#messages {
+  margin-bottom: 40px;
+  margin-left: 15px;
+}
+
+
+
+.usernamebrd {
+  font-size: 25px;
+  color: #7289DA;
+}
+
+.sidenav .account {
+  padding:10px;
+  margin-left: 15px;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  background:#111111;
+}
+
+.username {
+  font-size: 25px;
+  color: #7289DA;
+}
+.content {
+  color: white;
+  font-size: 25px;
+}
+
+#InputContentMessage {
+  width: 80%;
+  vertical-align: middle; 
+  display: inline;
+}
+#InputFileMessage {
+  border: none;
+  width: 20%;
+  vertical-align: middle; 
+  display: inline;
+}
+
+#memberlist  {
+  height: 100%;
+  width: 13%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #2f3136;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+#memberlist h2 {
+  margin-left:5%;
+  list-style-type: none;
+}
+
+.img {
+  object-fit: cover;
+  width:30px;
+  height:30px;
+}
+
+.msgimg {
+  object-fit: cover;
+  width:50px;
+  height:50px;
+}
+
+.dltbtn {
+  vertical-align: middle; 
+  display: inline;
+  text-decoration: none;
+  background-color: #af2142;
+  border: none;
+  margin-left: 79%;
+}
+
+
+.dot {
+  margin-left: 5px;
+  vertical-align: middle; 
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-color: green;
+  border-radius: 50%;
+  }
+

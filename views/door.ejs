@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <link rel="stylesheet" href="/css/style.css">
+<div class="sidenav">
+  
+  <a href="/register">Register</a>
+  <a href="/login">Login</a>
+</div>
+    
+    
+    <div class="main">
+      
+   <h1>
+     Login: 
+      </h1>
+      <br>
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <label for="UsernameInput">Username :</label>
+        <input type="text" class="form-control" name="user[username]" id="UsernameInput" required>
+      </div>
+      <div class="form-group">
+        <label for="InputPassword">Mot de passe :</label>
+        <input type="password" class="form-control" name="user[password]" id="InputPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    
+    </form>
+       </div>
+  </body>
+</html>
