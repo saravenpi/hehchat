@@ -40,13 +40,7 @@ $(function() {
   return false;
     socket.emit("message", $("#m").val(), localStorage.getItem("token"));
     $('#m').val('');
-    $("#m").reset();
-    $("#inputzone").reset();
   return false;
-
-  $('#m').val('');
-  $("#m").reset();
-  $("#inputzone").reset();
 
   });
 
